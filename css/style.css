@@ -1,3 +1,34 @@
+/*
+  1- General settings
+  2- Common Components
+  3- sections
+    3.1- About
+    3.2- Portfolio
+    3.3- Service
+    3.4- Price
+    3.5- Team
+    3.6- Contact
+    3.7- footer
+*/
+
+/* General style  */
+
+:root {
+  --main-color: #f1f1f1;
+  --sky-color: #5b85da;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Varela Round", sans-serif;
+}
+
 /* Common Components  */
 /*
     1- container
@@ -7,3 +38,194 @@
     5- hover effect 1 ( top to bottom)
     6- hover effect 2 ( left to right)
  */
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.clearfix {
+  clear: both;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+.btn {
+  padding: 15px 35px;
+  text-align: center;
+  border-radius: 3px;
+  border-width: 0;
+  display: inline-block;
+  min-width: 150px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.hover-opacity {
+  transition: opacity 0.5s;
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+
+/* Header  */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.head-content {
+  padding-top: 5px;
+}
+header .logo {
+  float: left;
+  width: 40%;
+}
+header .logo img {
+  width: 25%;
+}
+.nav-bar {
+  float: right;
+  width: 60%;
+  list-style: none;
+  text-align: right;
+}
+.nav-bar > li {
+  display: inline-block;
+}
+
+.nav-bar > li > a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--main-color, #f1f1f1);
+  padding: 20px 0;
+  font-weight: 300;
+  margin-right: 20px;
+}
+
+.nav-bar > li > a::after,
+.nav-bar > li > a.active::after {
+  content: "";
+  width: 0;
+  background-color: var(--sky-color);
+  height: 2px;
+  display: block;
+  transition: width 0.3s;
+}
+
+.nav-bar > li > a.active::after,
+.nav-bar > li > a:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .menu {
+  width: 200px;
+  position: absolute;
+  top: 55px;
+  left: -180px;
+  background-color: var(--sky-color);
+  text-align: left;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all;
+}
+
+.dropdown:hover .menu {
+  opacity: 100%;
+  visibility: visible;
+}
+
+.dropdown .menu a {
+  display: inline-block;
+  color: var(--main-color);
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+/* Home */
+.home {
+  height: 100vh;
+  background-image: url("../images/background/background1.webp");
+  background-size: cover;
+  position: relative;
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 60%;
+}
+
+.home-heading {
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-size: 3.5rem;
+}
+
+.home-paragraph {
+  color: var(--main-color);
+  margin: 20px 0;
+  line-height: 25px;
+}
+
+.btn-start {
+  background-color: var(--main-color);
+  margin-right: 10px;
+}
+
+.btn-more {
+  background-color: var(--sky-color);
+  color: var(--main-color);
+}
+
+/* About */
+/* Portfolio */
+/* Service */
+/* Price */
+/* Team */
+/* Contact */
+/* footer */
