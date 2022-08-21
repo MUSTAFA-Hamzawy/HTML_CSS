@@ -16,6 +16,7 @@
 :root {
   --main-color: #f1f1f1;
   --sky-color: #5b85da;
+  --paragraph-color: #6b8d9b;
 }
 
 * {
@@ -78,6 +79,11 @@ h2,
 h3,
 h4 {
   font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -101,6 +107,55 @@ button {
 
 .hover-opacity:hover {
   opacity: 0.8;
+}
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-header {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 100px;
+}
+.section-header::after {
+  content: "";
+  height: 4px;
+  width: 10%;
+  background-color: var(--sky-color);
+  display: block;
+  position: absolute;
+  left: 45%;
+  margin-top: 10px;
+}
+.left-right-fill,
+.top-bottom-fill {
+  position: relative;
+}
+.left-right-fill::after {
+  width: 0;
+  height: 100%;
+}
+.top-bottom-fill::after {
+  height: 0;
+  width: 100%;
+}
+.left-right-fill::after,
+.top-bottom-fill::after {
+  content: "";
+  background-color: #1c1d21;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.2s;
+  z-index: -1;
+}
+.left-right-fill:hover::after {
+  width: 100%;
 }
 
 /* Header  */
@@ -223,7 +278,120 @@ header .logo img {
 }
 
 /* About */
+
+.about-item {
+  float: left;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid lightgrey;
+}
+
+.about-item:nth-child(2) {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.about-item i {
+  color: var(--sky-color);
+  font-size: 40px;
+  margin-top: 10px;
+}
+.about-item .title {
+  margin: 20px 0 20px 0;
+  font-size: 22px;
+}
+.about-item:hover .title {
+  color: white;
+}
+.about-item .description {
+  color: var(--paragraph-color);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.about-item a {
+  color: var(--sky-color);
+}
 /* Portfolio */
+.portfolio {
+  background-color: #eaeaea;
+}
+.portfolio-content {
+  overflow: hidden;
+}
+.portfolio-item {
+  float: left;
+  width: calc(96% / 3);
+  position: relative;
+  padding: 2.5%;
+}
+.portfolio-item .layer-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.portfolio-item:hover .layer-card {
+  visibility: visible;
+  opacity: 1;
+}
+.portfolio-item .layer-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.portfolio-item .layer-info .category {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--sky-color);
+}
+.portfolio-item .layer-info i {
+  color: white;
+  background-color: var(--sky-color);
+  padding: 15px;
+}
+.portfolio-item .layer-info .title {
+  color: white;
+  margin: 20px 0 20px 0;
+  font-weight: 700;
+  text-align: center;
+}
+.portfolio-item .layer-info .category,
+.portfolio-item .layer-info i,
+.portfolio-item .layer-info .title {
+  position: relative;
+  top: 15px;
+}
+
+.portfolio-item .layer-info .category {
+  transition: all 0.1s;
+}
+.portfolio-item .layer-info i {
+  transition: all 0.2s;
+}
+.portfolio-item .layer-info .title {
+  transition: all 0.3s;
+}
+
+.portfolio-item:hover .layer-info .category,
+.portfolio-item:hover .layer-info i,
+.portfolio-item:hover .layer-info .title {
+  top: 0;
+}
+
+.portfolio-item:nth-child(3n + 2) {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.portfolio-item img {
+  width: 100%;
+}
 /* Service */
 /* Price */
 /* Team */
