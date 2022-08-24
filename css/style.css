@@ -763,4 +763,111 @@ header .logo img {
 }
 
 /* Contact */
+.contact-tools {
+  overflow: hidden;
+  text-align: center;
+}
+.contact-tools .tool {
+  float: left;
+  width: calc(96% / 3);
+}
+.contact-tools .tool:nth-child(3n + 2) {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.contact-tools .tool i {
+  color: var(--sky-color);
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.contact-tools .tool .title {
+  margin: 10px 0;
+}
+.contact-tools .tool span {
+  display: inline-block;
+  color: var(--paragraph-color);
+  margin-bottom: 20px;
+}
+.contact form {
+  width: 60%;
+  margin: auto;
+}
+.contact form .top {
+  text-align: center;
+}
+.contact form input[name="name"] {
+  margin-right: 3%;
+}
+.contact form input[name="name"],
+.contact form input[name="email"] {
+  width: 48%;
+  height: 40px;
+  background-color: #fafafa;
+  border: 1px solid var(--sky-color);
+  padding: 15px;
+  border-radius: 3px;
+}
+.contact form textarea,
+.contact form > input {
+  display: block;
+  width: 99%;
+  border: 1px solid var(--sky-color);
+}
+.contact form > input {
+  height: 40px;
+  margin: 10px 0;
+  background-color: #fafafa;
+  border: none;
+  padding: 15px;
+  border: 1px solid var(--sky-color);
+  border-radius: 3px;
+}
+.contact form textarea {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #fafafa;
+  border: none;
+  border: 1px solid var(--sky-color);
+  border-radius: 3px;
+}
+.contact form input[type="submit"] {
+  display: block;
+  width: 150px;
+  padding: 10px 12px;
+  margin: auto;
+  background-color: var(--sky-color);
+  color: white;
+  border-radius: 3px;
+  font-weight: 600;
+  cursor: pointer;
+}
 /* footer */
+footer {
+  background-color: #1c1d21;
+  text-align: center;
+}
+footer h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+footer .icons i {
+  color: white;
+  padding: 15px 15px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 50px;
+  border-radius: 3px;
+  background-color: var(--sky-color);
+}
+footer .cpyright {
+  margin-top: 20px;
+  color: var(--paragraph-color);
+  text-transform: uppercase;
+  font-weight: 100;
+}
+footer .cpyright a {
+  color: var(--sky-color);
+  font-weight: 700;
+}
