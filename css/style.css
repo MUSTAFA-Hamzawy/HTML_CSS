@@ -719,5 +719,48 @@ header .logo img {
 .team-content .team-item:hover .info .job {
   color: var(--sky-color);
 }
+
+/* news  */
+.news {
+  background-color: #fafafa;
+}
+.news-content {
+  overflow: hidden;
+}
+.news-content .news-item {
+  background-color: white;
+  float: left;
+  width: calc(96% / 3);
+  padding-bottom: 20px;
+}
+.news-content .news-item:nth-child(3n + 2) {
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.news-content .news-item img {
+  width: 100%;
+}
+.news-content .news-item .icons {
+  margin: 10px 0;
+}
+.news-content .news-item .icons i {
+  color: var(--sky-color);
+  margin-left: 10px;
+  font-size: 15px;
+}
+.news-content .news-item .title {
+  margin: 10px 5px;
+}
+.news-content .news-item .description {
+  line-height: 1.5;
+  color: var(--paragraph-color);
+  margin-left: 10px;
+}
+.news-content .news-item a.more {
+  display: block;
+  color: var(--sky-color);
+  margin: 20px 10px;
+}
+
 /* Contact */
 /* footer */
